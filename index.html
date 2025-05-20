@@ -527,12 +527,32 @@
         }
       }
 
-      .s-banners-slider {
-        overflow: hidden;
-      }
-
-      .s-banners-slider__container {
+      .main-baner {
+        background: #fff url('assets/main-banner.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 390px;
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        border-radius: 10px;
         display: flex;
+        align-items: center;
+        padding-left: 100px;
+        position: relative;
+        margin-bottom: 25px;
+      }
+      .main-baner::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 8px;
+        background-image: url('assets/arrows.svg');
+        background-position: center;
+        left: 0;
+        right: 0;
+        bottom: -8px;
       }
 
       .s-banners-slider__item {
@@ -601,6 +621,34 @@
         font-size: 1.8rem;
       }
 
+      @media (max-width: 1200px) {
+        .main-baner {
+          height: 508px;
+          align-items: flex-end;
+          padding-left: 0;
+          background-size: 100% 333px;
+          background-position: top;
+        }
+        .s-banners-slider__txt-section {
+          width: 100%;
+        }
+      }
+      @media (max-width: 769px) {
+        .main-baner {
+          background-image: url('assets/mobi-banner.webp');
+          background-size: contain;
+        }
+      }
+      @media (max-width: 455px) {
+        .main-baner {
+          height: 445px;
+        }
+      }
+      @media (max-width: 355px) {
+        .main-baner {
+          height: 405px;
+        }
+      }
       @media (min-width: 1200px) {
         .s-banners-slider__item {
           position: relative;
@@ -613,13 +661,9 @@
         .s-banners-slider__txt-section {
           border: 2px solid #1245ff;
           background-color: rgba(0, 0, 0, 0.4);
-          position: absolute;
-          left: 100px;
-          top: 0;
-          bottom: 0;
           width: 380px;
           height: 260px;
-          margin: auto;
+          /* margin: auto; */
         }
 
         .s-banners-slider__caption {
@@ -1277,7 +1321,23 @@
       </div>
     </header>
     <main class="s-main">
-      <section class="s-main-slider__container">
+      <section class="main-baner">
+        <div class="s-banners-slider__txt-section">
+          <p class="s-banners-slider__caption">
+            <span class="s-banners-slider__phrase">50 darmowych spinów i bonus</span>
+            <span class="s-banners-slider__phrase">bez depozytu 100 PLN</span>
+            <span class="s-banners-slider__phrase s-banners-slider__phrase_color">Odbierz bonus!</span>
+          </p>
+          <a
+            href="https://slottica.pl/link"
+            rel="noopener noreferrer nofollow"
+            class="s-banners-slider__active-link o-blue-btn o-link"
+          >
+            Zarejestruj się teraz
+          </a>
+        </div>
+      </section>
+      <!-- <section class="s-main-slider__container">
         <div class="s-banners-slider__item is-show">
           <div class="banner-wrapper">
             <picture>
@@ -1310,7 +1370,7 @@
             </a>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <div class="s-main__content-container o-container">
         <h1>Slottica Casino 🇵🇱​</h1>
